@@ -1,6 +1,6 @@
 [[redirects]]
 from="/api/*"
-to="<https://http://react-hnm-project-hans.netlify.app/:splat>"
+to="<https://react-hnm-project-hans.netlify.app/:splat>"
 status=200
 force=true
 
