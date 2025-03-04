@@ -1,7 +1,8 @@
 [[redirects]]
-from="/*"
-to="/index.html"
+from="/api/*"
+to="<https://http://react-hnm-project-hans.netlify.app/:splat>"
 status=200
+force=true
 
 [build.environment]
 NODE_VERSION = "18.16.0"

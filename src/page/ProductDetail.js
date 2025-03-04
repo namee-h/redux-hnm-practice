@@ -3,13 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Dropdown, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import apiClient from "../apiCilent";
 
 const ProductDetail = () => {
   let { id } = useParams();
   const [product, setProduct] = useState(null);
   console.log(id);
   const getProductDetail = async () => {
-    let url = `http://localhost:5000/products/${id}`;
+    // let url = `http://localhost:5000/products/${id}`;
+    let url = apiClient.get(`/products/${id}`)
     let res = await fetch(url);
     let data = await res.json();
     setProduct(data);

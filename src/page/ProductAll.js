@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "../component/ProductCard";
 import { Col, Container, Row } from "react-bootstrap";
 import { useSearchParams } from "react-router-dom";
+import apiClient from "../apiCilent";
 
 const ProductAll = () => {
   const [query, setQuery] = useSearchParams();
@@ -9,7 +10,8 @@ const ProductAll = () => {
   const getProduct = async () => {
     let searchQuery = query.get("q") || "";
     console.log("searchQuery", searchQuery);
-    let url = `http://localhost:5000/products?q=${searchQuery}`;
+    // let url = `http://localhost:5000/products?q=${searchQuery}`;
+    let url = apiClient.get(`/products?q=${searchQuery}`)
     let rep = await fetch(url);
     let data = await rep.json();
     setProductList(data);
