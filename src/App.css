@@ -1,0 +1,169 @@
+.navbar-area{
+  display: flex;
+  justify-content: space-between;
+}
+.nav-list{
+  display: flex;
+  justify-content: baseline;
+  margin: 20px;
+  list-style-type: none;
+  align-items: center;
+  cursor: pointer;
+}
+.nav-list > li {
+  padding: 0px 10px;
+}  
+.login-button{
+  display: flex;
+  justify-content: end;
+  margin: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+.login-button > div{
+  padding: 0px 10px;
+}
+.logo-img-section{
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.menu-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  position: relative;
+}
+.side-menu{
+  display: none;
+  padding: 20px;
+  cursor: pointer;
+}
+.side-list{
+  display: none;
+}
+.side-list>ul{
+  list-style-type: none;
+}
+.menu-list{
+  display: flex;
+  list-style-type: none;
+}
+.menu-list > li {
+  padding: 0px 20px;
+  cursor: pointer;
+}
+.search-box{
+  display: flex;
+  position: absolute;
+  right: 30px;
+}
+.search-box>div{
+  position: absolute;
+  color: gray;
+  cursor: pointer;
+}
+.search-box > input{  
+  outline: none;
+  border: 0px;
+  border-bottom: 2px solid black;
+  padding: 5px 20px;
+}
+.card-img-area{
+  display: flex;
+  position: relative;
+}
+.card-img-area>div{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+.card-img-area>div:hover{
+  color: red;
+  border: 1px;
+}
+.card-area:hover{
+  scale: 105%;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.login-area{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
+.login-form{
+  min-width: 420px;
+}
+.detail-img{
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+.detail-img>div{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+.detail-img>div:hover{
+  color: red;
+  scale: 105%;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.detail-area > h3 {
+  margin: 20px;
+}
+.detail-area>div{
+  margin: 20px;
+}
+
+.detail-area>button{
+  margin-left: 20px;
+  width: 90%;
+}
+@media (max-width:810px) {
+  .nav-list{
+    display: none;
+  }
+  .side-menu{
+    display: block;
+    position: relative;
+  }
+  .side-list>ul{
+    position: absolute;
+    left: -10px;
+  }
+  .side-list{
+    display: block;
+    border: 1px solid red;
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .card-img-area{
+    display: flex;
+    justify-content: center;
+  }
+  .card-img-area>div{
+    display: none;
+  }
+  .menu-list{
+    display: none;
+  }
+  .search-box{
+    position: relative;
+    margin-left: 55px;
+  }
+  .search-box>input{
+    width: 300px;
+  }
+  .img-info{
+    margin-left: 35px;
+    padding: 20px;
+  }
+}
